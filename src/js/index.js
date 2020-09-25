@@ -21,4 +21,13 @@ const buttonSave = document.querySelector('.buttons_button--save--js');
 
 buttonSave.addEventListener('click', () => {
     localStorage.setItem('entry', entryTextarea.value);
+    console.log('saved');
 })
+
+const buttonClear = document.querySelector('.buttons_button--clear--js');
+
+buttonClear.addEventListener('click', () => {
+    localStorage.removeItem('entry');
+    console.log('cleared');
+})
+
