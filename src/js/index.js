@@ -15,16 +15,21 @@ if (entry) {
 }
 
 const entryTextarea = document.querySelector('.text--js');
-entryTextarea.value = result;
+const buttonSave = document.querySelector('.save--js');
+const buttonClear = document.querySelector('.clear--js');
+const buttonLoad = document.querySelector('.load--js');
 
-const buttonSave = document.querySelector('.buttons_button--save--js');
+entryTextarea.value = result;
 
 buttonSave.addEventListener('click', () => {
     localStorage.setItem('entry', entryTextarea.value);
     console.log('saved');
 })
 
-const buttonClear = document.querySelector('.buttons_button--clear--js');
+buttonLoad.addEventListener('click', () => {
+    entryTextarea.value = localStorage.getItem('entry')
+    console.log('loaded');
+})
 
 buttonClear.addEventListener('click', () => {
     localStorage.removeItem('entry');
