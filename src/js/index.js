@@ -7,19 +7,11 @@ import '../scss/main.scss';
 /* place your code below */
 
 
-const entry = localStorage.getItem('entry');
-let result = '';
-
-if (entry) {
-    result = entry;
-}
-
 const entryTextarea = document.querySelector('.text--js');
 const buttonSave = document.querySelector('.save--js');
 const buttonClear = document.querySelector('.clear--js');
 const buttonLoad = document.querySelector('.load--js');
 
-entryTextarea.value = result;
 
 buttonSave.addEventListener('click', () => {
     localStorage.setItem('entry', entryTextarea.value);
@@ -27,7 +19,7 @@ buttonSave.addEventListener('click', () => {
 })
 
 buttonLoad.addEventListener('click', () => {
-    entryTextarea.value = localStorage.getItem('entry')
+    entryTextarea.value = localStorage.getItem('entry');
     console.log('loaded');
 })
 
