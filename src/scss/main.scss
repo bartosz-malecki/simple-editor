@@ -36,14 +36,10 @@ body {
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1e14b4",endColorstr="#0c0c2d",GradientType=1);
   min-height: 100vh;
-
   font-family: "Open Sans";
   backdrop-filter: blur(4px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
   color: #ffffff;
+  display: grid;
 }
 
 .button {
@@ -61,6 +57,21 @@ body {
   }
 }
 
+.header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    &__heading {
+    font-style: normal;
+    font-weight: 600;
+font-size: 44px;
+line-height: 64px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    letter-spacing: 10px;
+  }
+}
+
 .main {
   grid-area: main;
   &__text {
@@ -74,29 +85,28 @@ body {
     @media (max-width: 320px) {
       justify-content: space-around;
     }
-    
-  }
-}
-
-.header {
-  grid-area: header;
-  &__heading {
-    margin: 0 0 16px 0;
-    font-style: normal;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 }
 
 .footer {
   grid-area: footer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 16px;
+&__link {
+  text-decoration: none;
+  color: currentColor;
+  
+font-style: italic;
+
+}
 }
 
 .textarea {
-  
-  
   padding: 16px;
   border-radius: 10px;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -104,8 +114,10 @@ body {
 
 .wrapper {
   display: grid;
-  grid-template-areas: "header header header header"
-                       "... main aside ..."
-                       "footer footer footer footer";
+  grid-template-areas:
+    "header header header header"
+    "... main aside ..."
+    "footer footer footer footer";
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 140px auto 50px;
 }
