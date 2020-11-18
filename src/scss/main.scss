@@ -12,48 +12,75 @@ html {
 }
 
 body {
-  background-image: url(../assets/img/SB.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center center;
+  background: rgb(30, 20, 180);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(30, 20, 180, 1) 4%,
+    rgba(40, 34, 139, 1) 30%,
+    rgba(31, 29, 73, 1) 60%,
+    rgba(12, 12, 45, 1) 85%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(30, 20, 180, 1) 4%,
+    rgba(40, 34, 139, 1) 30%,
+    rgba(31, 29, 73, 1) 60%,
+    rgba(12, 12, 45, 1) 85%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(30, 20, 180, 1) 4%,
+    rgba(40, 34, 139, 1) 30%,
+    rgba(31, 29, 73, 1) 60%,
+    rgba(12, 12, 45, 1) 85%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1e14b4",endColorstr="#0c0c2d",GradientType=1);
   min-height: 100vh;
-  background-color: #ffffff;
+
   font-family: "Open Sans";
   backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 16px;
-  color: #000000;
+  color: #ffffff;
 }
 
-.buttons {
-  display: flex;
-  justify-content: flex-end;
+.button {
+  margin-left: 16px;
+  border: none;
+  height: 40px;
+  width: 77px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  border-radius: 10px;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   @media (max-width: 320px) {
-    justify-content: space-around;
-  }
-  &__button {
-    margin-left: 16px;
-    border: none;
-    height: 40px;
-    width: 77px;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 16px;
-    border-radius: 10px;
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-    @media (max-width: 320px) {
-      margin: 0;
-      
-    }
+    margin: 0;
   }
 }
 
 .main {
-  width: 100%;
-  max-width: 736px;
-  &__header {
+  grid-area: main;
+  &__text {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 16px;
+  }
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+    @media (max-width: 320px) {
+      justify-content: space-around;
+    }
+    
+  }
+}
+
+.header {
+  grid-area: header;
+  &__heading {
     margin: 0 0 16px 0;
     font-style: normal;
     display: flex;
@@ -63,18 +90,22 @@ body {
   }
 }
 
+.footer {
+  grid-area: footer;
+}
+
 .textarea {
-  width: 100%;
-  height: 245px;
-  left: 502px;
-  top: 334px;
+  
+  
   padding: 16px;
   border-radius: 10px;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.text {
-  width: 100%;
-  height: 100%;
-  margin-bottom: 16px;
+.wrapper {
+  display: grid;
+  grid-template-areas: "header header header header"
+                       "... main aside ..."
+                       "footer footer footer footer";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }

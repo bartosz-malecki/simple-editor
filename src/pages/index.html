@@ -18,15 +18,27 @@
     
   </head>
   <body>
+    <div class="wrapper">
+    <header class="header">
+      <h1 class="header__heading">NotePad</h1>
+    </header>
     <main class="main">
-      <h1 class="main__header">NotePad</h1>
-      <div class="text">
+      
+      <div class="content__text">
         <textarea class="textarea text--js" type="text" aria-label="enter your text here" placeholder="enter your text here" name="textarea"></textarea>
       </div>
-      <div class="buttons">
-        <button class="buttons__button save--js" aria-label="save">Save</button>
-        <button class="buttons__button clear--js" aria-label="clear">Clear</button>
-        <button class="buttons__button load--js" aria-label="load">Load</button>
+      <div class="content__buttons">
+        <button class="button save--js" aria-label="save">Save</button>
+        <button class="button clear--js" aria-label="clear">Clear</button>
+        <button class="button load--js" aria-label="load">Load</button>
       </div>
+    </main>
+    <aside class="aside"></aside>
+    <footer class="footer">
+      <p class="footer__content">
+        Made by <a href="https://github.com/bartosz-malecki" class="footer__link" target="_blank" rel="noopener noreferrer">Bartosz Małecki</a> - 2020
+      </p>
+    </footer>
+    </div>
   </body>
 </html>
