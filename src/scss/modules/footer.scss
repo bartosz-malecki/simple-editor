@@ -1,0 +1,15 @@
+.footer {
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    &__link {
+      text-decoration: none;
+      color: currentColor;
+      font-style: italic;
+    }
+  }

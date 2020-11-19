@@ -14,31 +14,100 @@
       property="og:url"
       content="https://bartosz-malecki.github.io/simple-editor/"
     />
-    
-    
   </head>
   <body>
     <div class="wrapper">
-    <header class="header">
-      <h1 class="header__heading">Simple editor</h1>
-    </header>
-    <main class="main">
-      <h2 class="main__heading">Your message</h2>
-      <div class="main__text">
-        <textarea class="textarea text--js" type="text" aria-label="enter your text here" placeholder="enter your text here" name="textarea"></textarea>
-      </div>
-      <div class="main__buttons">
-        <button class="button save--js" aria-label="save">Save</button>
-        <button class="button clear--js" aria-label="clear">Clear</button>
-        <button class="button load--js" aria-label="load">Load</button>
-      </div>
-    </main>
-    <aside class="aside"></aside>
-    <footer class="footer">
-      <p class="footer__content">
-        Made by <a href="https://github.com/bartosz-malecki" class="footer__link" target="_blank" rel="noopener noreferrer">Bartosz Małecki</a> - 2020
-      </p>
-    </footer>
+      <header class="header">
+        <h1 class="header__heading">Simple editor</h1>
+      </header>
+      <main class="content">
+        <h2 class="content__heading">Your message</h2>
+        <div class="content__text">
+          <textarea
+            class="content__textarea text--js"
+            type="text"
+            aria-label="enter your text here"
+            placeholder="enter your text here"
+            name="textarea"
+          ></textarea>
+        </div>
+        <div class="content__buttons">
+          <button class="button save--js" aria-label="save">Save</button>
+          <button class="button clear--js" aria-label="clear">Clear</button>
+          <button class="button load--js" aria-label="load">Load</button>
+        </div>
+      </main>
+      <aside class="editor">
+        <div class="editor__box">
+          <p class="editor__box--buttons">
+            <button class="editor__btn editor__btn-up--js" type="button">
+              A
+              <img
+                src="../assets/img/bth_up.svg"
+                class="editor__btn--arrow"
+                alt="up-arrow"
+              />
+            </button>
+            <button class="editor__btn editor__btn-down--js" type="button">
+              A
+              <img
+                src="../assets/img/bth_down.svg"
+                class="editor__btn--arrow"
+                alt="down-arrow"
+              />
+            </button>
+          </p>
+          <p class="editor__box-buttons">
+            <button
+              class="editor__btn editor__btn--bold editor__btn-bold--js"
+              type="button"
+            >
+              B
+            </button>
+            <button
+              class="editor__btn editor__btn--underline editor__btn-underline--js"
+              type="button"
+            >
+              U
+            </button>
+            <button
+              class="editor__btn editor__btn--italic editor__btn-italic--js"
+              type="button"
+            >
+              I
+            </button>
+          </p>
+          <p class="editor__box-fonts">
+            <select
+              name="select"
+              id="select"
+              class="editor__select editor__select--js"
+            >
+              <option value="arial" selected>Arial</option>
+              <option value="times-new-roman">Times New Roman</option>
+              <option value="verdana">Verdana</option>
+              <option value="lucida-sans">Lucida Sans</option>
+              <option value="dancing-script">Dancing Script</option>
+            </select>
+          </p>
+          <p class="editor__palette">
+            <input class="editor__palette--color" type="color" value="#00000" id="colorWell">
+          </p>
+        </div>
+      </aside>
+      <footer class="footer">
+        <p class="footer__content">
+          Made by
+          <a
+            href="https://github.com/bartosz-malecki"
+            class="footer__link"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Bartosz Małecki</a
+          >
+          - 2020
+        </p>
+      </footer>
     </div>
   </body>
 </html>
