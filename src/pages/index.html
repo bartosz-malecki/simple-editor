@@ -21,7 +21,14 @@
         <h1 class="header__heading">Simple editor</h1>
       </header>
       <main class="content">
-        <h2 class="content__heading">Your message</h2>
+        <h2 class="content__heading">
+          Your message
+          <img
+            src="../assets/img/createIcon.svg"
+            class="content__buttons--icon"
+            alt="create-icon"
+          />
+        </h2>
         <div class="content__text">
           <textarea
             class="content__textarea text--js"
@@ -29,13 +36,31 @@
             aria-label="enter your text here"
             placeholder="enter your text here"
             name="textarea"
-            style="font-size: 16px;"
+            style="font-size: 16px"
           ></textarea>
         </div>
         <div class="content__buttons">
-          <button class="button save--js" aria-label="save">Save</button>
-          <button class="button clear--js" aria-label="clear">Clear</button>
-          <button class="button load--js" aria-label="load">Load</button>
+          <button class="button save--js" aria-label="save">
+            <img
+              src="../assets/img/saveIcon.svg"
+              class="content__buttons--icon"
+              alt="save-icon"
+            /><span class="special-text">Save</span>
+          </button>
+          <button class="button clear--js" aria-label="clear">
+            <img
+              src="../assets/img/clearIcon.svg"
+              class="content__buttons--icon"
+              alt="clear-icon"
+            /><span class="special-text">Clear</span>
+          </button>
+          <button class="button load--js" aria-label="load">
+            <img
+              src="../assets/img/loadIcon.svg"
+              class="content__buttons--icon"
+              alt="clear-icon"
+            /><span class="special-text">Load</span>
+          </button>
         </div>
       </main>
       <aside class="editor">
@@ -92,7 +117,10 @@
             </select>
           </p>
           <p class="editor__palette">
-            <input class="editor__palette--color editor__palette--color--js" type="color">
+            <input
+              class="editor__palette--color editor__palette--color--js"
+              type="color"
+            />
           </p>
         </div>
       </aside>
