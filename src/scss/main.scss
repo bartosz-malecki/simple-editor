@@ -16,6 +16,10 @@ html {
   box-sizing: inherit;
 }
 
+:root {
+  --color: #000000;
+}  
+
 body {
   background: rgb(30, 20, 180);
   background: -moz-linear-gradient(
@@ -39,6 +43,7 @@ body {
     rgba(31, 29, 73, 1) 60%,
     rgba(12, 12, 45, 1) 85%
   );
+
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1e14b4",endColorstr="#0c0c2d",GradientType=1);
   min-height: 100vh;
   font-family: "Open Sans";
