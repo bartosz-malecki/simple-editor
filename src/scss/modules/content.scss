@@ -1,13 +1,21 @@
 .content {
     grid-area: main;
+    @media (max-width: 320px) {
+      margin: 0 5px;
+      justify-content: space-around;
+    }
     &__text {
       width: 100%;
-      padding-bottom: 16px;
+      padding-bottom: 32px;
+      @media (max-width: 320px) {
+        padding-bottom: 16px;
+        
+      }
     }
     &__buttons {
       text-align: right;
       @media (max-width: 320px) {
-        justify-content: space-around;
+        text-align: center;
       }
       &--icon {
         position: relative;
@@ -20,6 +28,12 @@
       font-weight: 600;
       font-size: 32px;
       line-height: 48px;
+      @media (max-width: 320px) {
+        text-align: center;
+        font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 5px;
+      }
     }
     &__textarea {
       color: var(--color);
