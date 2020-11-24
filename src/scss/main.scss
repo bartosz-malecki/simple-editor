@@ -61,7 +61,7 @@ body {
   grid-template-columns: 1fr 500px 170px 1fr;
   grid-template-rows: 180px auto 50px;
   grid-column-gap: 32px;
-  @media (max-width: 320px) {
+  @media (max-width: 425px) {
     grid-template-areas:
     "header header header header"
     "main main main main"
