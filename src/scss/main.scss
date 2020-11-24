@@ -71,6 +71,9 @@ body {
   grid-template-rows: 100px auto auto 50px;
   column-gap: 0;
   }
+  @media (max-width: 768px) {    
+  grid-template-rows: 120px auto 50px;
+  }
 }
 
 .special-text {
