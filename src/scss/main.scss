@@ -61,6 +61,9 @@ body {
   grid-template-columns: 1fr 500px 170px 1fr;
   grid-template-rows: 180px auto 50px;
   grid-column-gap: 32px;
+  @media (max-width: 768px) {    
+    grid-template-rows: 100px auto auto 50px;
+    }
   @media (max-width: 425px) {
     grid-template-areas:
     "header header header header"
@@ -71,13 +74,11 @@ body {
   grid-template-rows: 100px auto auto 50px;
   column-gap: 0;
   }
-  @media (max-width: 768px) {    
-  grid-template-rows: 120px auto 50px;
-  }
+  
 }
 
 .special-text {
   position: relative;
-  top: -7px;
-  padding-left: 3px;
+  top: -6px;
+  padding-left: 2px;
 }
