@@ -2,7 +2,7 @@
 
 ![cover](gh/cover.PNG)
 
-It's simple editor from WTF: Co ten frontend homework.
+It's simple editor from WTF: Co ten frontend homework. You can save and load your progress.
 
 ## How to use it?
 
