@@ -85,4 +85,4 @@ btnSizeDown.addEventListener("click", fontSizeDown);
 btnBold.addEventListener("click", fontBolder);
 btnUnderline.addEventListener("click", fontUnderline);
 btnItalic.addEventListener("click", fontItalic);
-btnFontSelect.addEventListener("click", fontSelect);
+btnFontSelect.addEventListener("change", fontSelect);
