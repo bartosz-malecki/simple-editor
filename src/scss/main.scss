@@ -61,6 +61,7 @@ body {
   grid-template-columns: 1fr 500px 170px 1fr;
   grid-template-rows: 180px auto 50px;
   grid-column-gap: 32px;
+<<<<<<< HEAD
   @media (max-width: 768px) {
     grid-template-rows: 100px auto 50px;
   }
@@ -74,10 +75,26 @@ body {
     grid-template-rows: 100px auto auto 50px;
     column-gap: 0;
   }
+=======
+  @media (max-width: 768px) {    
+    grid-template-rows: 100px auto auto 50px;
+    }
+  @media (max-width: 425px) {
+    grid-template-areas:
+    "header header header header"
+    "main main main main"
+    "aside aside aside aside"
+    "footer footer footer footer";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100px auto auto 50px;
+  column-gap: 0;
+  }
+  
+>>>>>>> b09e8799d39f1b5700ea4ea7ba0355e2f919fbad
 }
 
 .special-text {
   position: relative;
-  top: -7px;
-  padding-left: 3px;
+  top: -6px;
+  padding-left: 2px;
 }

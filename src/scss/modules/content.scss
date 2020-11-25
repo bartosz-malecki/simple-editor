@@ -1,7 +1,7 @@
 .content {
     grid-area: main;
     @media (max-width: 425px) {
-      margin: 0 5px;
+      margin: 0 10px;
       justify-content: space-around;
     }
     &__text {
